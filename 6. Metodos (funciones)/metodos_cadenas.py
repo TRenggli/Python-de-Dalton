@@ -4,7 +4,7 @@ cadena1 = "HolasoyTomas"
 cadena2 = "Bienvenido maquinola"
 
 #Convierte todo en Mayuscula
-resultado = cadena1.upper() 
+resultado = cadena2.upper() 
 
 #Convierte todo en Minuscula
 minusc = cadena1.lower()
@@ -18,7 +18,7 @@ busqueda_find = cadena1.find("s")
 
 
 #Buscamos una cadena en otra cadena (diferente metodo)
-busqueda_index =  cadena1.index("d")
+#busqueda_index =  cadena1.index("d")
 #La diferencia con el Find, es que el Index nos devuelve una exepcion, osea que nos traba el programa
 
 
