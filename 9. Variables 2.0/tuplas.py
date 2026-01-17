@@ -3,6 +3,8 @@ tupla_vacia = tuple(["dato1", "dato2"])  # Cree una lista y la converti en tupla
 print(tupla_vacia)          # Salida: ('dato1', 'dato2')
 print(type(tupla_vacia))  # Salida: <class 'tuple'>
 
+# No podemos crear tuplas vacias a nop ser que usemos la funcion tuple()
+
 # Otras formas de crear tuplas:
 
 tupla = "dato1", "dato2", "dato3"  # Sin usar parentesis, separando los elementos por comas

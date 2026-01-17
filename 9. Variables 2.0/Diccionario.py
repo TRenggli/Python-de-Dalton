@@ -15,6 +15,18 @@ diccionario3 = dict(lista_de_tuplas)
 print(diccionario3)  # Salida: {'clave1': 'valor1', 'clave2': 'valor2', 'clave3': 'valor3'}
 print(type(diccionario3))  # Salida: <class 'dict'>
 
+# Metodo 4: Usando la funcion zip() para combinar dos listas
+claves = ["clave1", "clave2", "clave3"]
+valores = ["valor1", "valor2", "valor3"]
+diccionario4 = dict(zip(claves, valores))
+print(diccionario4)  # Salida: {'clave1': 'valor1', 'clave2': 'valor2', 'clave3': 'valor3'}
+print(type(diccionario4))  # Salida: <class 'dict'>
+
+# Metodo 5: Crear un diccionario vacio con fromkeys()
+claves_vacias = ["clave1", "clave2", "clave3"]
+diccionario5 = dict.fromkeys(claves_vacias)
+print(diccionario5)  # Salida: {'clave1': None, 'clave2': None, 'clave3': None}
+
 # Accediendo a los valores de un diccionario
 valor1 = diccionario1["clave1"]
 print(valor1)  # Salida: valor1
@@ -58,3 +70,5 @@ for clave, valor in diccionario1.items():
 # La clave es clave1 y el valor es valor1
 # La clave es clave2 y el valor es nuevo_valor2
 # La clave es clave4 y el valor es valor4
+
+# No podemos crear diccionarios vacios a nop ser que usemos la funcion dict()

@@ -1,7 +1,7 @@
 # Iterar significa recorrer cada uno de los elementos de una coleccion (lista, tupla, diccionario, conjunto, etc) uno por uno
 
 # Recordemos que elementos son iterables:
-# - Listas
+# - conjunto
 # - Tuplas
 # - Diccionarios
 # - Conjuntos
@@ -17,7 +17,7 @@
 # Para iterar en Python, usamos el bucle "for"
 
 # ---------------------------------------------------------------------------------------------------------
-# Listas
+# conjunto
 # Ejemplo 1:
 
 animales = ["perro", "gato", "loro", "cocodrilo"]
@@ -45,39 +45,24 @@ for numero in numeros:
 
 # ---------------------------------------------------------------------------------------------------------
 
-# Ahora una pregunta, que pasa si queremos iterar sobre dos listas? 
+# Ahora una pregunta, que pasa si queremos iterar sobre dos conjunto? 
 # Podemos hacer dos for juntos, o un for dentro de otro for..pero eso seria ineficiente
 # La mejor forma es usar la funcion built-in "zip()"
 
-# Primero las listas deben tener la misma cantidad de elementos
+# Primero las conjunto deben tener la misma cantidad de elementos
 animales1 = ["gato", "perro", "loro", "cocodrilo"]
 numeros1 = [52, 16, 14, 72]
 
-for numero , animal in zip(animales1, numeros1): # numero y animal son variables temporales que toman los valores de cada elemento de las listas en cada iteracion
-                                                 # y lo que esta adentro del zip() son las dos listas que queremos iterar, su orden es importante porque la primera lista sera la que tome la variable numero y la segunda lista sera la que tome la variable animal
+for numero , animal in zip(animales1, numeros1): # numero y animal son variables temporales que toman los valores de cada elemento de las conjunto en cada iteracion
+                                                 # y lo que esta adentro del zip() son las dos conjunto que queremos iterar, su orden es importante porque la primera lista sera la que tome la variable numero y la segunda lista sera la que tome la variable animal
     print(f"Recorriendo la lista 1: El numero es {numero}")
     print(f"Recorriendo la lista 2: El animal es {animal}\n")
     
-# zip() combina las dos listas en una sola, creando tuplas de elementos correspondientes de cada lista
+# zip() combina las dos conjunto en una sola, creando tuplas de elementos correspondientes de cada lista
 # En la primera iteracion, numero sera 52 y animal sera "gato" . Lo hace al mismo tiempo
-# En la segunda iteracion, numero sera 16 y animal sera "perro" y asi sucesivamente hasta recorrer todos los elementos de ambas listas. Por eso tienen que coincidir en la cantidad de elementos (tamaño)
+# En la segunda iteracion, numero sera 16 y animal sera "perro" y asi sucesivamente hasta recorrer todos los elementos de ambas conjunto. Por eso tienen que coincidir en la cantidad de elementos (tamaño)
 
 # ---------------------------------------------------------------------------------------------------------
-
-# Lo que podemos hacer tambien es iterar usan do la fu ncion built-in "range()" para generar una secuencia de numeros que representen los indices de las listas
-# De esta forma podemos acceder a los elementos de ambas listas usando esos indices
-
-numeros2 = [52, 16, 14, 72]
-
-# Forma NO optima de recorrer una lista usando range() y len()
-print("\nUsando range() y len():")
-for num in range(len(numeros2)):  # range genera una secuencia de numeros desde 0 hasta la longitud de la lista numeros (len(numeros))
-                                 # Ejemplo: si la lista tiene 4 elementos, range(len(numeros)) generara los numeros 0, 1, 2, 3
-                                 # Y sia dentro de range le hubiera puesto 2 paarmetros, ejemplo 10,20, hubiera generado numeros desde 10 hasta 19
-    numero2 = numeros2[num]        # Accedemos al elemento de la lista numeros usando el indice num
-    
-    print(f"\nAhora la variable es {numero2}")
-    input("Presiona Enter para continuar...")
 
 # Forma OPTIMA de recorrer una lista usando enumerate()
 numeros3 = [52, 16, 14, 72]
@@ -99,4 +84,3 @@ for numero in numeros3:
     
 else: # El else tiene que estar a la misma altura que el for, no adentro del for y se van a ejecutar SIEMPRE despues de que termine de iterar todo el for
     print("\nSe ha terminado de iterar la lista.")
-                                              

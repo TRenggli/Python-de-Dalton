@@ -56,7 +56,6 @@ print(dir(set(["hola", 23, True])))
 
 # Lo unico que podemos hacer con una TUPLA es contar elementos y buscar elementos (index y count)
 
-
-
+# No podemos crear listas vacias a nop ser que usemos la funcion list()
 
 print(lista1)
